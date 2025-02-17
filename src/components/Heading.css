@@ -1,0 +1,33 @@
+#heading{
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+
+#wordmark{
+    max-width: 7.5vw;
+    margin-left: 1.5vw;
+}
+
+#heading ul{
+    padding:1vw;
+}
+
+#heading li{
+   list-style-type: none;
+   display: inline-block;
+   font-size: clamp(0.5em, 2vw, 1.25em);
+   padding: 1.5vw;
+   padding-top: 5vh;
+   color:white
+}
+
+#heading a{
+    text-decoration: none;
+    color: inherit
+}
