@@ -1,0 +1,18 @@
+#bg-div {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#bg-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #bg-div img {
+        object-position: left; /* Adjust the position of the image */
+    }
+}

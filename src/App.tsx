@@ -1,7 +1,11 @@
-import ListGroup from './components/ListGroup';
+import Background from "./components/Background";
 
-function App(){
-  return <div><ListGroup /></div>;
+function App() {
+  return (
+    <div>
+      <Background />
+    </div>
+  );
 }
 
 export default App;
