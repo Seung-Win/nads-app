@@ -1,0 +1,17 @@
+import "./Merch.css";
+
+function Home() {
+  return (
+    <div className="container-fluid" id="holder">
+      <div className="container-fluid" id="content">
+        <h1 className="title">NCR Alliance of DOST Scholars</h1>
+        <p id="description">
+          Merch
+        </p>
+        <button type="button" className="btn btn-light" id="lrnBtn">Learn Test</button>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
