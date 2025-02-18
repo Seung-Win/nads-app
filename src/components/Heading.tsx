@@ -18,16 +18,16 @@ function Heading() {
         />
         <ul className="">
           <li className="">
-            <a href="#">Merch</a>
+            <a href="/merch">Merch</a>
           </li>
           <li className="">
-            <a href="#">Registration</a>
+            <a href="/register">Registration</a>
           </li>
           <li className="">
-            <a href="#">About</a>
+            <a href="/about">About</a>
           </li>
           <li className="">
-            <a href="#">Contact Us</a>
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>
