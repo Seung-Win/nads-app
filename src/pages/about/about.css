@@ -7,13 +7,46 @@
     padding-bottom: 4vw;
     border-radius: 3vh 3vh 0 0;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(255, 255, 255, 0.644);
+    font-family: Helvetica;
+}
+
+/* WebKit browsers (Chrome, Safari) */
+#contentAbout::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+#contentAbout::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+#contentAbout::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+#contentAbout::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
 }
 
 .aboutHeading{
-    color: rgb(255, 255, 255);
-    font-family: Helvetica;
+    color: rgb(0, 0, 0);
     font-weight: 800;
     font-size: clamp(2rem, 1vw, 5rem);
     padding: 2vw
+}
+
+.imgWordmark{
+    max-height: 12vw;
+}
+
+#contentAbout p{
+    padding:2vw 4vw;
+    font-size: clamp(1rem, 1vw, 2rem);
+    text-align: center;
+}
+
+.photo1{
+    max-width: 50vw;
 }

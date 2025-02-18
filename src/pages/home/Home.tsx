@@ -1,7 +1,16 @@
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate("/about");
+  };
+
   return (
+    <>
     <div className="container-fluid" id="holder">
       <div className="container-fluid" id="content">
         <h1 className="title">NCR Alliance of DOST Scholars</h1>
@@ -17,7 +26,8 @@ function Home() {
           instilling in them a sense of pride and purpose. Together, let us
           shape the future of STEM and stimulate positive change in our society.
         </p>
-        <button type="button" className="btn btn-light" id="lrnBtn">
+        
+        <button type="button" className="btn btn-light" id="lrnBtn"  onClick={handleLearnMoreClick}>
           Learn More
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +45,7 @@ function Home() {
         </button>
       </div>
     </div>
+    </>
   );
 }
 
