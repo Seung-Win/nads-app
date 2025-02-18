@@ -21,7 +21,7 @@ function Heading() {
             <a href="#">Merch</a>
           </li>
           <li className="">
-            <a href="#">Registration</a>
+            <a href="#">Events</a>
           </li>
           <li className="">
             <a href="#">About</a>
