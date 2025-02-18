@@ -1,0 +1,15 @@
+.container {
+    padding: 5vw;
+    text-align: center;
+    z-index: 4;
+    position: fixed;
+    top: 4vw;
+    display: flex;
+}
+
+.title{
+    color: white;
+    font-family: Montserrat;
+    font-weight: 1000;
+    font-size: clamp (2.5rem, 2rem, 10rem);
+}
