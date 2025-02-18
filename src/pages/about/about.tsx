@@ -1,17 +1,13 @@
 import "./About.css";
 
-function Home() {
+function About() {
   return (
     <div className="container-fluid" id="holder">
-      <div className="container-fluid" id="content">
-        <h1 className="title">NCR Alliance of DOST Scholars</h1>
-        <p id="description">
-          pushe
-        </p>
-        <button type="button" className="btn btn-light" id="lrnBtn">Learn Test</button>
+      <div className="container-fluid" id="contentAbout">
+        <h1 className="aboutHeading">ABOUT US</h1>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default About;
