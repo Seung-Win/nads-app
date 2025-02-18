@@ -26,6 +26,9 @@ function Heading() {
           <li className="">
             <a href="#">About</a>
           </li>
+          <li className="">
+            <a href="#">Contact Us</a>
+          </li>
         </ul>
       </nav>
     </>

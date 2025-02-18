@@ -7,7 +7,8 @@
     justify-content: space-between;
     align-items: center;
     z-index:1000;
-    padding: 4vw
+    padding:4vw;
+    background-color: rgba(0, 0, 0, 0.253);
 }
 
 #wordmark{
@@ -28,7 +29,7 @@
     color: inherit;
     padding:.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
-    border-radius: 2vh;
+    border-radius: 3vh;
 }
 
 #heading a:hover{
