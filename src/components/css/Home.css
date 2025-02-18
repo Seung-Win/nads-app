@@ -1,3 +1,15 @@
+.css */
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
 #holder {
     padding: 4vw;
     padding-bottom: 0%;
