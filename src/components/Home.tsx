@@ -17,6 +17,7 @@ function Home() {
           instilling in them a sense of pride and purpose. Together, let us
           shape the future of STEM and stimulate positive change in our society.
         </p>
+        <button type="button" className="btn btn-light" id="lrnBtn">Learn Test</button>
       </div>
     </div>
   );

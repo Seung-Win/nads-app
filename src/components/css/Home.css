@@ -29,8 +29,13 @@
 }
 
 #description{
-    width: 100%;
+    width: 75%;
     color:white;
-    font-size: clamp(1.5em, 0.25vw, 3em);
+    font-size: clamp(1.25em, 0.25vw, 2em);
     text-align: justify;
+}
+
+#lrnBtn{
+    border-radius: 2vh;
+    padding:1vw;
 }
