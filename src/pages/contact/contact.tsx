@@ -1,12 +1,27 @@
 import "./Contact.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Modal, Button } from "react-bootstrap";
 
 function Contact() {
+  const [showModal, setShowModal] = useState(false);
+  const [enableButton, setEnable] = useState(false);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
+  const handleCheckboxChange = (event) => {
+    setEnable(event.target.checked);
+  };
+
   return (
     <div className="container-fluid" id="holder">
       <div className="container-fluid" id="contactDiv">
         <h1 className="heading-1">CONTACT US</h1>
+        <p>
+          We’d love to hear from you! Whether you have inquiries about our
+          project, collaboration opportunities, or any technical concerns, feel
+          free to reach out. Our team is always ready to assist you.
+        </p>
         <div className="container-fluid" id="separator">
           <form className="container-fluid" id="contactForm">
             <label>Full Name</label>
@@ -23,7 +38,30 @@ function Contact() {
             />
             <label>Message</label>
             <textarea className="form-control" placeholder="Message" />
-            <button type="submit" id="submitBtn" className="btn btn-dark">
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="dataPrivacyCheckbox"
+                onChange={handleCheckboxChange}
+              />
+              <label className="form-check-label" htmlFor="dataPrivacyCheckbox">
+                I agree to the collection, storage, and processing of my
+                personal data in accordance with the NCR Alliance of DOST
+                Scholars Data Privacy Policy. I understand that my information
+                will only be used for the purpose of responding to my inquiry
+                and will not be shared with third parties without my consent.
+                <Button
+                  variant="link"
+                  onClick={handleShowModal}
+                  className="form-check-label"
+                  id="dataPrivacy"
+                >
+                  Read full data privacy
+                </Button>
+              </label>
+            </div>
+            <button type="submit" id="submitBtn" className="btn btn-dark" disabled={!enableButton}>
               Submit
             </button>
           </form>
@@ -88,6 +126,23 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Data Privacy Policy</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>
+            Your data privacy policy content goes here. You can include all the
+            necessary information about how you collect, store, and process
+            personal data.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }
