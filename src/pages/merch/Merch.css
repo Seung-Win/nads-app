@@ -1,0 +1,70 @@
+/* WebKit browsers (Chrome, Safari) */
+#contentMerch::-webkit-scrollbar {
+    width: 0;
+}
+
+
+#contentMerch::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+#contentMerch::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+#contentMerch{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+    height:100%;
+    border-radius: 3vh 3vh 0 0;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.644);
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-temp{
+    width: 20%;
+    margin: 2vw;
+    overflow: hidden;
+    border-radius: 1vw;
+    background-color: rgba(0, 0, 0, 0.575);
+    padding: 1vw;
+    color:white;
+}
+
+.card img{
+    padding:1vw;
+    border-radius: 1vw;
+}
+
+.card-body{
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.card-title{
+    margin-top:0.5vw;
+}
+
+.card-subtitle{
+    font-weight: 300;
+    padding:0.25vw 0;
+}
+
+#merchBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#merchBtn{
+    border-radius: 0.75vw;
+    border: none;
+    padding: 0.5vw 1.5vw;
+
+}

@@ -1,7 +1,3 @@
-*{
-    font-family: 'Helvetica Neue';
-}
-
 /* WebKit browsers (Chrome, Safari) */
 #contactDiv::-webkit-scrollbar {
     width: 0;

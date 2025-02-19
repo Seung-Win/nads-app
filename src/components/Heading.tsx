@@ -19,7 +19,7 @@ function Heading() {
             <Link className="Link" to="/merch">Merch</Link>
           </li>
           <li>
-            <Link className="Link" to="/register">Events</Link>
+            <Link className="Link" to="/events">Events</Link>
           </li>
           <li>
             <Link className="Link" to="/about">About</Link>
