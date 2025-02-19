@@ -23,10 +23,9 @@
 
 
 #contactForm{
-    width:55%;
+    width:50%;
     align-items: center;
     margin: 2vw;
-    border-right: solid black 0.1vw;
     padding-right: 2vw;
 }
 
@@ -55,12 +54,17 @@
     color: white;
 }
 
+.line{
+    height: 100%;
+    border: solid black 0.1vw;
+    width: 0%;
+}
+
 #socials{
-    width: 45%;
-    margin: 2vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    padding-left: 2vw;
+    padding: 0;
 }
 
 #socials a{
@@ -68,9 +72,12 @@
     color: inherit;
     padding:.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
-    border-radius: 3vh;
     font-family: 'Montserrat';
-    font-size: clamp(1em, 1.2vw, 3em);
+    font-size: clamp(1em, 1.5vw, 3em);
+}
+
+#socials svg{
+    margin: 0 1vw;
 }
 
 #socials a:hover{
