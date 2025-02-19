@@ -32,7 +32,7 @@
     border-radius: 3vh;
 }
 
-#heading a:hover{
+#heading .Link:hover{
     background-color: white;
     color:black;
 }
