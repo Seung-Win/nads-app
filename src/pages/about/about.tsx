@@ -9,9 +9,9 @@ function About() {
         <h1 className="heading-1">ABOUT US</h1>
         <img className="imgWordmark" src={wordmark2} />
         <p>
-          As a youth organization, the NCR Alliance of DOST Scholars - NADS is
+          As a youth organization, the NCR Alliance of DOST Scholars (NADS) is
           dedicated to the overall welfare improvement and development of
-          DOST-SEI scholars throughout the National Capital Region - NCR. Our
+          DOST-SEI scholars throughout the National Capital Region. Our
           goal is to nurture scholars' leadership, interpersonal, and academic
           skills by offering them support and guidance. NADS is committed to
           supporting DOST-SEI scholars' civic engagement and patriotism while
