@@ -1,17 +1,20 @@
 import "./Contact.css";
+import { useState } from 'react';
 
-function Home() {
+function Contact() {
+
+
   return (
     <div className="container-fluid" id="holder">
-      <div className="container-fluid" id="content">
-        <h1 className="title">NCR Alliance of DOST Scholars</h1>
-        <p id="description">
-          mama mo contact
-        </p>
-        <button type="button" className="btn btn-light" id="lrnBtn">Learn Test</button>
+      <div className="container-fluid" id="contentAbout">
+      <h1 className="heading-1">CONTACT US</h1>
+        <form className="container-fluid" id="contactForm">
+          <label>Name</label>
+          <input type="text" />
+        </form>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Contact;

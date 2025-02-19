@@ -21,7 +21,7 @@
    font-size: clamp(0.5em, 2vw, 1.25em);
    padding: 1.5vw;
    margin-top: 0.5vw;
-   color:white
+   color:white;
 }
 
 #heading a{
@@ -30,6 +30,7 @@
     padding:.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
     border-radius: 3vh;
+    font-family: 'Montserrat';
 }
 
 #heading .Link:hover{

@@ -8,7 +8,6 @@
     border-radius: 3vh 3vh 0 0;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.644);
-    font-family: Helvetica;
 }
 
 /* WebKit browsers (Chrome, Safari) */
@@ -26,8 +25,9 @@
     background: #555; /* Color of the scrollbar thumb on hover */
 }
 
-.aboutHeading{
+.heading-1{
     color: rgb(0, 0, 0);
+    font-family: 'Montserrat';
     font-weight: 800;
     font-size: clamp(2rem, 1vw, 5rem);
     padding: 2vw
@@ -38,6 +38,7 @@
 }
 
 #contentAbout p{
+    font-family: 'Helvetica Neue';
     padding:2vw 4vw;
     font-size: clamp(1rem, 1vw, 2rem);
     text-align: center;
