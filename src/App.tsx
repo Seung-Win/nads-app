@@ -4,22 +4,24 @@ import Heading from "./components/Heading";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-import Register from "./pages/registration/Registration";
+import Events from "./pages/events/Events";
 import Merch from "./pages/merch/Merch";
 
 function App() {
   return (
-    <Router>
-      <Background />
-      <Heading />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/merch" element={<Merch />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Background />
+        <Heading />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/merch" element={<Merch />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

@@ -1,0 +1,121 @@
+/* WebKit browsers (Chrome, Safari) */
+#contactDiv::-webkit-scrollbar {
+    width: 0;
+}
+
+
+#contactDiv::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+#contactDiv::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+
+#contactDiv{
+    padding: 0;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4vw;
+    border-radius: 3vh 3vh 0 0;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.644);
+}
+
+#separator{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+
+#contactForm{
+    width:50%;
+    align-items: center;
+    margin: 0 2vw;
+    padding-right: 2vw;
+}
+
+#contactForm label{
+    padding: 1vw 0;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+}
+
+#dataPrivacy{
+    padding: 1vw 0;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+    font-size: clamp(0.5rem, 0.75vw, 2rem);
+}
+
+#contactForm textarea {
+    height: 10vh; /* Adjust the height as needed */
+    resize: none;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin: 1vw 0;
+}
+
+.form-check-label{
+    font-weight: 300;
+    font-size: clamp(0.5rem, 0.75vw, 2rem);
+    padding:0 0 !important;
+}
+
+#submitBtn{
+    border-radius: 2vh;
+    padding:0.5vw 1vw;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    font-size: clamp(1em, 1vw, 3em);
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-top: 1vh;
+}
+
+#submitBtn:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
+    color: white;
+}
+
+.line{
+    height: 100%;
+    border: solid black 0.1vw;
+    width: 0%;
+}
+
+#socials{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#socials a{
+    text-decoration: none;
+    color: inherit;
+    padding:.75vh 1.25vw;
+    transition: background-color 0.5s ease-in-out;
+    font-family: 'Montserrat';
+    font-size: clamp(1em, 1.5vw, 3em);
+}
+
+#socials svg{
+    margin: 0 1vw;
+}
+
+#socials a:hover{
+    background-color: white;
+    color:black;
+}
