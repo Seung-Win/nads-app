@@ -1,0 +1,31 @@
+#contentMerch a{
+    margin:0 1vw 0 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+#productImg{
+    max-width: 25vw;
+    width: 75%;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
+}
+
+#contentMerch h2{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-weight: 500;
+    font-size: clamp(.5em, 1.25vw, 5rem);
+    border-radius: 0.5vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
+    padding:0.5vw 1.75vw;
+    margin-bottom: 1vw;
+}
+
+#contentMerch ul{
+    width: 100%;
+    padding: 0 2vw 2vw;
+    align-self: flex-start;
+}

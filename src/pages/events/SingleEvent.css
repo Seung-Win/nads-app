@@ -1,0 +1,79 @@
+#contentMerch a{
+    margin:0 1vw 0 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+#productImg{
+    max-width: 25vw;
+    width: 75%;
+    margin-bottom: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
+}
+
+
+#contentMerch h3{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-weight: 600;
+    font-size: clamp(0.75em, 1.5vw, 5rem);
+    border-radius: 0.5vw;
+    align-self: center;
+}
+
+#contentMerch ul{
+    width: 100%;
+    padding: 0 2vw 2vw;
+    align-self: flex-start;
+}
+
+#eventRegis{
+    display: flex;
+    flex-direction: column;
+    border-top: 0.01vw solid rgba(0, 0, 0, 0.479);
+    width:95%;
+    padding: 1vw 0;
+}
+
+#eventRegis form{
+    padding: 1vw;
+}
+
+#eventRegis label{
+    padding-top: 1vw;
+}
+
+.form-check-inline{
+    margin-left: 0.25vw;
+    margin-top: 0.25vw;
+}
+
+.form-check-input{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-size: clamp(0.75em, 1vw, 5rem);
+}
+
+.form-check-label{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-size: clamp(0.75em, 1vw, 5rem);
+}
+
+#eventSubmitBtn{
+    border-radius: 2vh;
+    padding:0.5vw 2vw;
+    font-weight: 500;
+    font-family: 'Montserrat' 'Arial' 'Tahoma';
+    font-size: clamp(0.75rem, 1vw, 2rem);
+    display: flex;
+    align-self: center;
+    border: none;
+}
+
+#eventSubmitBtn:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
+    color: white;
+}

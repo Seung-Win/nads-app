@@ -1,10 +1,8 @@
 #contentAbout{
-    padding: 0;
     height:100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-bottom: 4vw;
+    flex-direction: column;
     border-radius: 3vh 3vh 0 0;
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.644);
@@ -27,22 +25,28 @@
 
 .heading-1{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
     font-weight: 800;
-    font-size: clamp(2rem, 1vw, 5rem);
+    font-size: clamp(1.5em, 1.75vw, 5rem);
     padding-top: 2vw;
     padding-bottom: 1vw;
+    padding-left: 2vw;
+    text-align: left;
+    align-self: flex-start;
 }
 
 .imgWordmark{
-    max-height: 12vw;
+    max-width:20%;
+    aspect-ratio: 2.25/1;
 }
 
 #contentAbout p{
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue' 'Verdana';
     padding:2vw 4vw;
-    font-size: clamp(1rem, 1vw, 2rem);
-    text-align: center;
+    font-size: clamp(0.75rem, 0.9vw, 2rem);
+    padding-left: 2vw;
+    text-align: left;
+    align-self: flex-start;
 }
 
 .photo1{
