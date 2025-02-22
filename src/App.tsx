@@ -5,7 +5,9 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Events from "./pages/events/Events";
+import SingleEvent from "./pages/events/SingleEvent"
 import Merch from "./pages/merch/Merch";
+import Product from "./pages/merch/Product";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/events" element={<Events />} />
           <Route path="/merch" element={<Merch />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/event" element={<SingleEvent />} />
         </Routes>
       </Router>
     </>

@@ -1,13 +1,13 @@
 import "./Contact.css";
 import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import DataPrivacy from "../modal/DataPrivacy";
 
 function Contact() {
   const [showModal, setShowModal] = useState(false);
   const [enableButton, setEnable] = useState(false);
 
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+  const handleShowModal = () => setShowModal(true)
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnable(event.target.checked);
@@ -45,7 +45,7 @@ function Contact() {
                 id="dataPrivacyCheckbox"
                 onChange={handleCheckboxChange}
               />
-              <label className="form-check-label" htmlFor="dataPrivacyCheckbox">
+              <label className="form-check-label" htmlFor="dataPrivacyCheckbox" id="dataPrivacyLabel">
                 I agree to the collection, storage, and processing of my
                 personal data in accordance with the NCR Alliance of DOST
                 Scholars Data Privacy Policy. I understand that my information
@@ -126,23 +126,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <Modal show={showModal} onHide={handleCloseModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Data Privacy Policy</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>
-            Your data privacy policy content goes here. You can include all the
-            necessary information about how you collect, store, and process
-            personal data.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <DataPrivacy show={showModal} handleClose={() => setShowModal(false)} />
     </div>
   );
 }
