@@ -18,7 +18,7 @@
 #heading li{
    list-style-type: none;
    display: inline-block;
-   font-size: clamp(0.5em, 2vw, 1.25em);
+   font-size: clamp(0.5em, 1vw, 1.25em);
    padding: 1.5vw;
    margin-top: 0.5vw;
    color:white;

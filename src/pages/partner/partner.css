@@ -59,6 +59,12 @@
     padding: 1vw 0;
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
+    font-size: clamp(0.75rem, 1vw, 2rem);
+}
+
+#contactForm input {
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-size: clamp(0.75rem, 1vw, 2rem);
 }
 
 
@@ -77,12 +83,15 @@
 #dataPrivacyBtn {
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
-    font-size: clamp(0.75rem, 0.75vw, 2rem);
+    font-size: clamp(0.75rem, 0.75vw, 2rem) !important;
 }
 
 #contactForm textarea {
-    height: 10vh; /* Adjust the height as needed */
+    height: 10vh;
     resize: none;
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-size: clamp(0.75rem, 1vw, 2rem);
+    margin-bottom: 1vw;
 }
 
 #submitBtn {
