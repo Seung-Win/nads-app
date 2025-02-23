@@ -6,6 +6,7 @@ import Heading from "./components/Heading";
 import Home from "./pages/home/Home";
 const About = React.lazy(() => import("./pages/about/About"));
 const Contact = React.lazy(() => import("./pages/contact/Contact"));
+const Partner = React.lazy(() => import("./pages/partner/Partner"));
 const Events = React.lazy(() => import("./pages/events/Events"));
 const Merch = React.lazy(() => import("./pages/merch/Merch"));
 const Product = React.lazy(() => import("./pages/merch/Product"));
@@ -70,6 +71,14 @@ function AnimatedRoutes() {
             element={
               <React.Suspense fallback="Loading...">
                 <SingleEvent />
+              </React.Suspense>
+            }
+          />
+          <Route
+            path="/partner"
+            element={
+              <React.Suspense fallback="Loading...">
+                <Partner />
               </React.Suspense>
             }
           />

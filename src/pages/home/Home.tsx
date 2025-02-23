@@ -50,17 +50,16 @@ function Home() {
             NCR Alliance of DOST Scholars
           </motion.h1>
           <motion.p variants={itemVariants} id="description">
-            As a youth organization, the NCR Alliance of DOST Scholars - NADS is
+            As a youth organization, the NCR Alliance of DOST Scholars (NADS) is
             dedicated to the overall welfare improvement and development of
-            DOST-SEI scholars throughout the National Capital Region - NCR. Our
-            goal is to nurture scholars' leadership, interpersonal, and academic
-            skills by offering them support and guidance. NADS is committed to
-            supporting DOST-SEI scholars' civic engagement and patriotism while
-            elevating STEM excellence. Through this, we empower our scholars to
-            become catalysts for change in their communities and beyond by
-            instilling in them a sense of pride and purpose. Together, let us
-            shape the future of STEM and stimulate positive change in our
-            society.
+            DOST-SEI scholars throughout the National Capital Region. Our goal is
+            to nurture scholars' leadership, interpersonal, and academic skills by
+            offering them support and guidance. NADS is committed to supporting
+            DOST-SEI scholars' civic engagement and patriotism while elevating
+            STEM excellence. Through this, we empower our scholars to become
+            catalysts for change in their communities and beyond by instilling in
+            them a sense of pride and purpose. Together, let us shape the future
+            of STEM and stimulate positive change in our society.
           </motion.p>
 
           <motion.button
