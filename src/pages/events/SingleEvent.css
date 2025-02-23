@@ -25,7 +25,7 @@
 
 .heading-1{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-family: 'Montserrat' 'Arial' 'Tahoma';
     font-weight: 800;
     font-size: clamp(1.5em, 1.75vw, 5rem);
     padding-top: 2vw;
@@ -51,7 +51,7 @@
 
 #contentSingleEvent h3{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-family: 'Montserrat' 'Arial' 'Tahoma';
     font-weight: 600;
     font-size: clamp(0.75em, 1.5vw, 5rem);
     border-radius: 0.5vw;
@@ -67,7 +67,7 @@
 
 #contentSingleEvent h2{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-family: 'Montserrat' 'Arial' 'Tahoma';
     font-weight: 500;
     font-size: clamp(.5em, 1.25vw, 5rem);
     border-radius: 0.5vw;
@@ -110,12 +110,12 @@
 
 .form-check-input{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-size: clamp(0.75em, 0.75vw, 5rem);
 }
 
 .form-check-label{
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-size: clamp(0.75em, 0.75vw, 5rem);
 }
 
@@ -142,7 +142,7 @@
     border-radius: 2vh;
     padding:0.5vw 2vw;
     font-weight: 500;
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-size: clamp(0.75rem, 1vw, 2rem);
     display: flex;
     align-self: center;

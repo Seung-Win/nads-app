@@ -35,7 +35,7 @@
 }
 
 #contactDiv p {
-    padding-left: 2vw;
+    padding: 0 2vw;
     text-align: left;
     align-self: flex-start;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
@@ -58,7 +58,13 @@
 #contactForm label {
     padding: 1vw 0;
     font-family: 'Helvetica Neue', 'Verdana';
+    font-size: clamp(0.75rem, 1vw, 2rem);
     font-weight: 400;
+}
+
+#contactForm input {
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-size: clamp(0.75rem, 1vw, 2rem);
 }
 
 
@@ -71,7 +77,7 @@
 #dataPrivacyLabel {
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
-    font-size: clamp(0.75rem, 0.75vw, 2rem);
+    font-size: clamp(0.75rem, 0.75vw, 2rem) !important;
 }
 
 #dataPrivacyBtn {
@@ -83,6 +89,9 @@
 #contactForm textarea {
     height: 10vh;
     resize: none;
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-size: clamp(0.75rem, 1vw, 2rem);
+    margin-bottom: 1vw;
 }
 
 #submitBtn {
@@ -94,7 +103,7 @@
     display: flex;
     align-items: center;
     border: none;
-    margin-top: 1vh;
+    margin: 1vh 0;
 }
 
 #submitBtn:hover {
@@ -121,7 +130,7 @@
     color: inherit;
     padding: 0.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-size: clamp(0.5rem, 1vw, 2rem);
 }
 

@@ -23,7 +23,7 @@
 
 .heading-1{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-weight: 800;
     font-size: clamp(1.5em, 1.75vw, 5rem);
     padding-top: 2vw;
@@ -34,7 +34,7 @@
 }
 
 #pEvents{
-    padding-left: 2vw;
+    padding: 0 2vw;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
 }
 
