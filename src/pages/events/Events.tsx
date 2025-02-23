@@ -51,6 +51,11 @@ function Events() {
             </div>
           ))}
         </div>
+        <div id="partnerBtnContainer">
+          <Link to="/partner">
+            <button id="partnerBtn">Partner With Us</button>
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
