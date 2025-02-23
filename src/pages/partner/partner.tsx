@@ -158,7 +158,7 @@ function Partner() {
               </svg>
               LinkedIn
             </a>
-            <a href="mailto:rc.nads.sei@gmail.com">
+            <a href="mailto:rc.nads.externals@gmail.com">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="3vw"
