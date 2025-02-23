@@ -2,11 +2,13 @@ import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
 
+const id = ['1LNVL4k6TX9IKJkyBDw1c5jAx8HqdLOog']
+
 export const events = [
   {
-    image: image1,
-    title: "SULONG",
-    subtitle: "Blahblah",
+    image: `https://drive.google.com/thumbnail?id=${id[0]}&sz=w5000`,
+    title: "Scholars Colloquium",
+    subtitle: "Layag: Paglansag sa Kisameng Kristal",
     text: "description dito",
     date: "15/12/2024",
     participants: "Open for All",
@@ -16,7 +18,7 @@ export const events = [
   {
     image: image2,
     title: "SULONG",
-    subtitle: "Blahblah",
+    subtitle: "Uniting NCR Scholars for Innovation, Empowerment, and Progress",
     text: "description dito",
     date: "15/12/2024",
     participants: "Open for All",

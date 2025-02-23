@@ -13,7 +13,7 @@ function SingleEvent() {
   return (
     <>
     <div className="container-fluid" id="holder">
-      <div className="container-fluid" id="contentMerch">
+      <div className="container-fluid" id="contentSingleEvent">
         <h1 className="heading-1">
           <Link to="/events">
             <svg
@@ -35,7 +35,7 @@ function SingleEvent() {
         <img src={item.image} alt={item.title} id="productImg" />
         <h2>
           {" "}
-          {item.title}: {item.subtitle}{" "}
+          {item.subtitle}{" "}
         </h2>
         <p id="pMerch"> {item.text} </p>
         <ul className="list-group">

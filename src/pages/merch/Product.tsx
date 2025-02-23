@@ -11,7 +11,7 @@ function Product() {
 
   return (
     <div className="container-fluid" id="holder">
-      <div className="container-fluid" id="contentMerch">
+      <div className="container-fluid" id="contentProduct">
         <h1 className="heading-1">
           <Link to="/merch">
             <svg

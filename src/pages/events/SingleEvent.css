@@ -1,4 +1,41 @@
-#contentMerch a{
+/* WebKit browsers (Chrome, Safari) */
+#contentSingleEvent::-webkit-scrollbar {
+    width: 0;
+}
+
+
+#contentSingleEvent::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+#contentSingleEvent::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+#contentSingleEvent{
+    height:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3vh 3vh 0 0;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.644);
+}
+
+.heading-1{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-weight: 800;
+    font-size: clamp(1.5em, 1.75vw, 5rem);
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    padding-left: 2vw;
+    text-align: left;
+    align-self: flex-start;
+}
+
+#contentSingleEvent a{
     margin:0 1vw 0 0;
     text-decoration: none;
     color: inherit;
@@ -12,17 +49,35 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
 }
 
-
-#contentMerch h3{
+#contentSingleEvent h3{
     color: rgb(0, 0, 0);
     font-family: 'Montserrat' 'Arial Black' 'Tahoma';
     font-weight: 600;
     font-size: clamp(0.75em, 1.5vw, 5rem);
     border-radius: 0.5vw;
     align-self: center;
+    margin:0;
 }
 
-#contentMerch ul{
+#contentSingleEvent ul{
+    width: 100%;
+    padding: 0 2vw 2vw;
+    align-self: flex-start;
+}
+
+#contentSingleEvent h2{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
+    font-weight: 500;
+    font-size: clamp(.5em, 1.25vw, 5rem);
+    border-radius: 0.5vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.575);
+    padding:0.5vw 1.75vw;
+    margin-bottom: 1vw;
+}
+
+#contentSingleEvent ul{
     width: 100%;
     padding: 0 2vw 2vw;
     align-self: flex-start;
@@ -44,6 +99,10 @@
     padding-top: 1vw;
 }
 
+.form-check{
+    margin-top: 1vw;
+}
+
 .form-check-inline{
     margin-left: 0.25vw;
     margin-top: 0.25vw;
@@ -51,21 +110,39 @@
 
 .form-check-input{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
-    font-size: clamp(0.75em, 1vw, 5rem);
+    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-size: clamp(0.75em, 0.75vw, 5rem);
 }
 
 .form-check-label{
-    color: rgb(0, 0, 0);
-    font-family: 'Montserrat' 'Arial Black' 'Tahoma';
-    font-size: clamp(0.75em, 1vw, 5rem);
+    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-size: clamp(0.75em, 0.75vw, 5rem);
+}
+
+.radio{
+    padding:0 !important;
+}
+
+#eventsDataPrivacyLabel{
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.75vw, 2rem);
+    padding:0 !important;
+}
+
+#eventsDataPrivacyBtn{
+    padding: 0;
+    margin:0;
+    font-family: 'Helvetica Neue', 'Verdana';
+    font-weight: 400;
+    font-size: clamp(0.75rem, 0.75vw, 2rem);
 }
 
 #eventSubmitBtn{
     border-radius: 2vh;
     padding:0.5vw 2vw;
     font-weight: 500;
-    font-family: 'Montserrat' 'Arial' 'Tahoma';
+    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
     font-size: clamp(0.75rem, 1vw, 2rem);
     display: flex;
     align-self: center;

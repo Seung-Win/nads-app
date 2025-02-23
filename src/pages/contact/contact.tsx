@@ -55,7 +55,7 @@ function Contact() {
                   variant="link"
                   onClick={handleShowModal}
                   className="form-check-label"
-                  id="dataPrivacy"
+                  id="dataPrivacyBtn"
                 >
                   Read full data privacy
                 </Button>

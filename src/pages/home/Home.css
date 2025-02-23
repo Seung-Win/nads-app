@@ -35,7 +35,7 @@
 
 .title{
     color: white;
-    font-family: 'Montserrat' 'Arial' 'Tahoma';
+    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
     font-weight: 800;
     font-size: clamp(0.75em, 3vw, 4em);
 }
@@ -43,7 +43,7 @@
 #description{
     width: 75%;
     color:white;
-    font-family: 'Helvetica Neue' 'Verdana';
+    font-family: 'Helvetica Neue', 'Verdana';
     font-size: clamp(0.5em, 1vw, 2em);
     text-align: justify;
     font-weight: 300;

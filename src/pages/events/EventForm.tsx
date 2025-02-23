@@ -130,7 +130,7 @@ function EventForm() {
                 value="RA7687"
                 required
               />
-              <label className="form-check-label">RA 7687</label>
+              <label className="form-check-label radio">RA 7687</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -139,7 +139,7 @@ function EventForm() {
                 name="scholarshipType"
                 value="merit"
               />
-              <label className="form-check-label">Merit</label>
+              <label className="form-check-label radio">Merit</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -148,7 +148,7 @@ function EventForm() {
                 name="scholarshipType"
                 value="RA10612"
               />
-              <label className="form-check-label">RA 10612</label>
+              <label className="form-check-label radio">RA 10612</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -157,7 +157,7 @@ function EventForm() {
                 name="scholarshipType"
                 value="JLSS7687"
               />
-              <label className="form-check-label">JLSS RA 7687</label>
+              <label className="form-check-label radio">JLSS RA 7687</label>
             </div>
             <div className="form-check form-check-inline">
               <input
@@ -166,7 +166,7 @@ function EventForm() {
                 name="scholarshipType"
                 value="JLSSmerit"
               />
-              <label className="form-check-label">JLSS Merit</label>
+              <label className="form-check-label radio">JLSS Merit</label>
             </div>
           </div>
           <div className="col">
@@ -194,7 +194,7 @@ function EventForm() {
           <label
             className="form-check-label"
             htmlFor="dataPrivacyCheckbox"
-            id="dataPrivacyLabel"
+            id="eventsDataPrivacyLabel"
           >
             I agree to the collection, storage, and processing of my personal
             data in accordance with the NCR Alliance of DOST Scholars Data
@@ -205,7 +205,7 @@ function EventForm() {
               variant="link"
               onClick={handleShowModal}
               className="form-check-label"
-              id="dataPrivacy"
+              id="eventsDataPrivacyBtn"
             >
               Read full data privacy
             </Button>

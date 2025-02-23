@@ -19,9 +19,9 @@ function Events() {
                 <h5 className="card-title">{item.title}</h5>
                 <h6 className="card-subtitle mb-2">{item.subtitle}</h6>
                 <p className="card-text">{item.text}</p>
-                <div id="merchBtnContainer">
+                <div id="eventBtnContainer">
                 <Link to="/event" state={{item}} className="card-link">
-                  <button id="merchBtn">More</button>
+                  <button id="eventBtn">More</button>
                 </Link>
                 </div>
               </div>
