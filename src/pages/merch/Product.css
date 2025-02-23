@@ -25,7 +25,7 @@
 
 .heading-1{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-weight: 800;
     font-size: clamp(1.5em, 1.75vw, 5rem);
     padding-top: 2vw;
@@ -51,7 +51,7 @@
 
 #contentProduct h2{
     color: rgb(0, 0, 0);
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-weight: 500;
     font-size: clamp(.5em, 1.25vw, 5rem);
     border-radius: 0.5vw;

@@ -30,7 +30,7 @@
     padding:.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
     border-radius: 3vh;
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
 }
 
 #heading .Link:hover{
