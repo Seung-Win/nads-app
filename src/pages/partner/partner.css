@@ -103,33 +103,21 @@
     color: white;
 }
 
-.line {
-    height: 100%;
-    border: solid black 0.1vw;
-    width: 0%;
-}
 
-#socials {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-#socials a {
+.email-highlight {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5vh 0.5vh;
+    background-color: #555;
+    color: whitesmoke;
+    border-radius: 0.5vh;
     text-decoration: none;
-    color: inherit;
-    padding: 0.75vh 1.25vw;
-    transition: background-color 0.5s ease-in-out;
-    font-family: 'Montserrat', 'Arial Black', 'Tahoma';
-    font-size: clamp(0.5rem, 1vw, 2rem);
-}
-
-#socials svg {
-    margin: 0 1vw;
-}
-
-#socials a:hover {
-    background-color: white;
+    font-weight: bold;
+  }
+  
+  .email-highlight:hover {
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
     color: black;
-}
+  }
+  
