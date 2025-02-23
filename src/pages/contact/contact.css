@@ -81,7 +81,7 @@
 }
 
 #contactForm textarea {
-    height: 10vh; /* Adjust the height as needed */
+    height: 10vh;
     resize: none;
 }
 
