@@ -53,7 +53,7 @@ function Events() {
         </div>
         <div id="partnerBtnContainer">
           <Link to="/partner">
-            <button id="partnerBtn">Partner With Us</button>
+            <button id="partnerBtn">Be our Partner!</button>
           </Link>
         </div>
       </div>

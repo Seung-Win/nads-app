@@ -41,7 +41,7 @@ function Contact() {
         <h1 className="heading-1">CONTACT US</h1>
         <p>
           We’d love to hear from you! Whether you have inquiries about our
-          project, collaboration opportunities, or any technical concerns, feel
+          project, DOST-SEI scholarship, or any technical concerns, feel
           free to reach out. Our team is always ready to assist you.
         </p>
         <div className="container-fluid" id="separator">
