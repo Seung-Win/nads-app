@@ -35,7 +35,7 @@
 }
 
 #contactDiv p {
-    padding-left: 2vw;
+    padding: 0 2vw;
     text-align: left;
     align-self: flex-start;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
