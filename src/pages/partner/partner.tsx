@@ -47,8 +47,8 @@ function Partner() {
           <a href="mailto:rc.nads.externals@gmail.com" className="email-highlight">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1.5vw"
-                height="1.5vh"
+                width="1vw"
+                height="1vh"
                 fill="currentColor"
                 className="bi bi-envelope-at"
                 viewBox="0 0 16 16"
