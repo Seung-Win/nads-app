@@ -28,7 +28,14 @@ function Events() {
       exit="exit"
     >
       <div className="container-fluid" id="contentEvents">
-        <h1 className="heading-1">EVENTS</h1>
+        <div id="title">
+          <h1 className="heading-1">EVENTS</h1>
+          <div id="partnerBtnContainer">
+            <Link to="/partner">
+              <button id="partnerBtn">Be our Partner!</button>
+            </Link>
+          </div>
+        </div>
         <p id="pEvents">
           Stay ahead in technology, collaboration, and research with NCR
           Alliance of DOST Scholars! Our events are designed to inspire,
@@ -50,11 +57,6 @@ function Events() {
               </div>
             </div>
           ))}
-        </div>
-        <div id="partnerBtnContainer">
-          <Link to="/partner">
-            <button id="partnerBtn">Be our Partner!</button>
-          </Link>
         </div>
       </div>
     </motion.div>

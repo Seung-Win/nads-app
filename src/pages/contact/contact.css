@@ -35,7 +35,7 @@
 }
 
 #contactDiv p {
-    padding: 0 2vw;
+    padding-left: 2vw;
     text-align: left;
     align-self: flex-start;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
@@ -103,7 +103,7 @@
     display: flex;
     align-items: center;
     border: none;
-    margin: 1vh 0;
+    margin-top: 1vh;
 }
 
 #submitBtn:hover {
