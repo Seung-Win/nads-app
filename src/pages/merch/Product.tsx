@@ -1,16 +1,53 @@
 import "./Product.css";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Product() {
   const location = useLocation();
   const item = location.state?.item;
 
+  const pageVariants = {
+    hidden: { x: "100vw", opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.25, ease: "easeOut" },
+    },
+    exit: {
+      x: "-100vw",
+      opacity: 0,
+      transition: { duration: 0.25, ease: "easeIn" },
+    },
+  };
+
   if (!item) {
-    return <h1 className="heading-1">NO ITEM FOUND</h1>;
+    return (
+      <>
+        <motion.div
+          className="container-fluid"
+          id="holder"
+          variants={pageVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <div className="container-fluid" id="contentProduct">
+            <h1 className="heading-1">NO ITEM FOUND</h1>;
+          </div>
+        </motion.div>
+      </>
+    );
   }
 
   return (
-    <div className="container-fluid" id="holder">
+    <motion.div
+      className="container-fluid"
+      id="holder"
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="container-fluid" id="contentProduct">
         <h1 className="heading-1">
           <Link to="/merch">
@@ -34,12 +71,18 @@ function Product() {
         <h2> {item.price} </h2>
         <p id="pMerch"> {item.text} </p>
         <ul className="list-group">
-          <li className="list-group-item"><b>Materials:</b> {item.materials}</li>
-          <li className="list-group-item"><b>Release Date:</b> {item.release}</li>
-          <li className="list-group-item"><b>Product Code:</b> {item.code}</li>
+          <li className="list-group-item">
+            <b>Materials:</b> {item.materials}
+          </li>
+          <li className="list-group-item">
+            <b>Release Date:</b> {item.release}
+          </li>
+          <li className="list-group-item">
+            <b>Product Code:</b> {item.code}
+          </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

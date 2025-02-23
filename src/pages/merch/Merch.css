@@ -84,7 +84,7 @@
 }
 
 .card-text{
-    font-size: clamp(0.5rem, 0.9vw, 2rem);
+    font-size: clamp(0.5rem, 0.75vw, 2rem);
 }
 
 #merchBtnContainer {

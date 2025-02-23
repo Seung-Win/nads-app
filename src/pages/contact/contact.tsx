@@ -1,20 +1,42 @@
 import "./Contact.css";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { motion } from "framer-motion";
 import DataPrivacy from "../modal/DataPrivacy";
 
 function Contact() {
   const [showModal, setShowModal] = useState(false);
   const [enableButton, setEnable] = useState(false);
 
-  const handleShowModal = () => setShowModal(true)
+  const handleShowModal = () => setShowModal(true);
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnable(event.target.checked);
   };
 
+  const pageVariants = {
+    hidden: { x: "100vw", opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.25, ease: "easeOut" },
+    },
+    exit: {
+      x: "-100vw",
+      opacity: 0,
+      transition: { duration: 0.25, ease: "easeIn" },
+    },
+  };
+
   return (
-    <div className="container-fluid" id="holder">
+    <motion.div
+      className="container-fluid"
+      id="holder"
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className="container-fluid" id="contactDiv">
         <h1 className="heading-1">CONTACT US</h1>
         <p>
@@ -45,7 +67,11 @@ function Contact() {
                 id="dataPrivacyCheckbox"
                 onChange={handleCheckboxChange}
               />
-              <label className="form-check-label" htmlFor="dataPrivacyCheckbox" id="dataPrivacyLabel">
+              <label
+                className="form-check-label"
+                htmlFor="dataPrivacyCheckbox"
+                id="dataPrivacyLabel"
+              >
                 I agree to the collection, storage, and processing of my
                 personal data in accordance with the NCR Alliance of DOST
                 Scholars Data Privacy Policy. I understand that my information
@@ -61,7 +87,12 @@ function Contact() {
                 </Button>
               </label>
             </div>
-            <button type="submit" id="submitBtn" className="btn btn-dark" disabled={!enableButton}>
+            <button
+              type="submit"
+              id="submitBtn"
+              className="btn btn-dark"
+              disabled={!enableButton}
+            >
               Submit
             </button>
           </form>
@@ -127,7 +158,7 @@ function Contact() {
         </div>
       </div>
       <DataPrivacy show={showModal} handleClose={() => setShowModal(false)} />
-    </div>
+    </motion.div>
   );
 }
 

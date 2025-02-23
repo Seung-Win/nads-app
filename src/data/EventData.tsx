@@ -22,67 +22,7 @@ export const events = [
     text: "description dito",
     date: "15/12/2024",
     participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image3,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image1,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image1,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image2,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image3,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
-    registration: "Closed",
-    eventCode: "sulong2024"
-  },
-  {
-    image: image1,
-    title: "SULONG",
-    subtitle: "Blahblah",
-    text: "description dito",
-    date: "15/12/2024",
-    participants: "Open for All",
     registration: "Open",
     eventCode: "sulong2024"
   },
-];
+]

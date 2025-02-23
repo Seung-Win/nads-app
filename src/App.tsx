@@ -1,23 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Background from "./components/Background";
 import Heading from "./components/Heading";
 import Home from "./pages/home/Home";
-const About = React.lazy(() => import("./pages/about/about"));
-const Contact = React.lazy(() => import("./pages/contact/contact"));
+const About = React.lazy(() => import("./pages/about/About"));
+const Contact = React.lazy(() => import("./pages/contact/Contact"));
 const Events = React.lazy(() => import("./pages/events/Events"));
 const Merch = React.lazy(() => import("./pages/merch/Merch"));
 const Product = React.lazy(() => import("./pages/merch/Product"));
 const SingleEvent = React.lazy(() => import("./pages/events/SingleEvent"));
 
-function App() {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <>
-      <Router>
-        <Background />
-        <Heading />
-        <Routes>
-          <Route
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+      <Route
             path="/"
             element={
               <React.Suspense fallback="Loading...">
@@ -73,7 +73,18 @@ function App() {
               </React.Suspense>
             }
           />
-        </Routes>
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Router>
+        <Background />
+        <Heading />
+        <AnimatedRoutes />
       </Router>
     </>
   );

@@ -46,7 +46,6 @@
 
 .card-event{
     width: 20%;
-    aspect-ratio: 3/4;
     margin: 2vw;
     overflow: hidden;
     border-radius: 1vw;
@@ -78,10 +77,16 @@
     font-weight: 300;
     padding:0.25vw 0;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .card-text{
-    font-size: clamp(0.5rem, 0.9vw, 2rem);
+    font-size: clamp(0.5rem, 0.75vw, 2rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 #eventBtnContainer {
