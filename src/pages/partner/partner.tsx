@@ -1,4 +1,4 @@
-import "./partner.css";
+import "./Partner.css";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
