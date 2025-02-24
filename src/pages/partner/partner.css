@@ -1,18 +1,18 @@
 /* WebKit browsers (Chrome, Safari) */
-#contactDiv::-webkit-scrollbar {
+#partnerDiv::-webkit-scrollbar {
     width: 0;
 }
 
-#contactDiv::-webkit-scrollbar-thumb {
+#partnerDiv::-webkit-scrollbar-thumb {
     background: #888; /* Color of the scrollbar thumb */
     border-radius: 10px; /* Rounded corners for the thumb */
 }
 
-#contactDiv::-webkit-scrollbar-thumb:hover {
+#partnerDiv::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color of the scrollbar thumb on hover */
 }
 
-#contactDiv {
+#partnerDiv {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
     align-self: flex-start;
 }
 
-#contactDiv p {
+#partnerDiv p {
     padding: 0 2vw;
     text-align: left;
     align-self: flex-start;
@@ -48,21 +48,20 @@
     align-items: center;
 }
 
-#contactForm {
-    width: 50%;
+#partnerForm {
     align-items: center;
     margin: 0 2vw;
     padding-right: 2vw;
 }
 
-#contactForm label {
+#partnerForm label {
     padding: 1vw 0;
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
     font-size: clamp(0.75rem, 1vw, 2rem);
 }
 
-#contactForm input {
+#partnerForm input {
     font-family: 'Helvetica Neue', 'Verdana';
     font-size: clamp(0.75rem, 1vw, 2rem);
 }
@@ -86,7 +85,7 @@
     font-size: clamp(0.75rem, 0.75vw, 2rem);
 }
 
-#contactForm textarea {
+#partnerForm textarea {
     height: 10vh;
     resize: none;
     font-family: 'Helvetica Neue', 'Verdana';
@@ -103,7 +102,7 @@
     display: flex;
     align-items: center;
     border: none;
-    margin: 0.5vh 0;
+    margin: 1vh 0;
 
 }
 
@@ -117,19 +116,15 @@
 .email-highlight {
     display: inline-flex;
     align-items: center;
-    padding: 0.5vh 0.5vh;
-    background-color: rgba(0, 0, 0, 0.356);
-    color: white;
     border-radius: 0.5vh;
-    text-decoration: none;
-    color: inherit;
-    padding: 0.75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
     font-family: 'Montserrat', 'Arial', 'Tahoma';
-    font-size: clamp(0.5rem, 1vw, 2rem);
+    font-size: clamp(0.75rem, 0.9vw, 2rem);
+    margin-left: 0.5vw;
 }
 
 .email-highlight:hover {
     background-color: #555;
     border: none;
+    color: white;
 }
