@@ -27,9 +27,6 @@ function Heading() {
           <li>
             <Link className="Link" to="/contact">Contact Us</Link>
           </li>
-          <li>
-            <Link className="Link" to="/partner">Partner With Us</Link>
-          </li>
         </ul>
       </nav>
     </>
