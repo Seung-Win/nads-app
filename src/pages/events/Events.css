@@ -56,6 +56,12 @@
     margin-bottom: 1vw;
 }
 
+#partnerBtn:hover{
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
+    color: black
+}
+
 #pEvents{
     padding: 0 2vw;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
@@ -130,9 +136,4 @@
     color: white;
 }
 
-#partnerBtn:hover{
-    background-color: rgba(0, 0, 0, 0.356);
-    border: none;
-    color: black
-}
 
