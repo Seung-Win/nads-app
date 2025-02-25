@@ -69,9 +69,9 @@ function SingleEvent() {
             </Link>
             {item.title}
           </h1>
-          <img src={item.image} alt={item.title} id="productImg" />
+          <img src={item.image} alt={item.title} id="eventImg" />
           <h2> {item.subtitle} </h2>
-          <p id="pMerch"> {item.text} </p>
+          <p> {item.text} </p>
           <ul className="list-group">
             <li className="list-group-item">
               <b>Participants:</b> {item.participants}

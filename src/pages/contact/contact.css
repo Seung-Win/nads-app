@@ -22,7 +22,7 @@
     background-color: rgba(255, 255, 255, 0.644);
 }
 
-.heading-1 {
+#contactDiv .heading-1 {
     color: rgb(0, 0, 0);
     font-family: 'Montserrat', 'Arial Black', 'Tahoma';
     font-weight: 800;
@@ -41,7 +41,7 @@
     font-size: clamp(0.75rem, 0.9vw, 2rem);
 }
 
-#separator {
+#contactDiv #separator {
     display: flex;
     flex-direction: row;
     justify-items: center;
@@ -52,7 +52,7 @@
     width: 50%;
     align-items: center;
     margin: 0 2vw;
-    padding-right: 2vw;
+    padding: 0;
 }
 
 #contactForm label {
@@ -60,6 +60,7 @@
     font-family: 'Helvetica Neue', 'Verdana';
     font-size: clamp(0.75rem, 1vw, 2rem);
     font-weight: 400;
+    align-self: flex-start;
 }
 
 #contactForm input {
@@ -68,19 +69,20 @@
 }
 
 
-.form-check-label {
+#contactForm .form-check-label {
     font-weight: 300;
     font-size: clamp(0.75rem, 1vw, 2rem);
     padding: 0 0 !important;
+    align-self: flex-start;
 }
 
-#dataPrivacyLabel {
+#contactForm #dataPrivacyLabel {
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
     font-size: clamp(0.75rem, 0.75vw, 2rem) !important;
 }
 
-#dataPrivacyBtn {
+#contactForm #dataPrivacyBtn {
     font-family: 'Helvetica Neue', 'Verdana';
     font-weight: 400;
     font-size: clamp(0.75rem, 0.75vw, 2rem);
@@ -94,7 +96,7 @@
     margin-bottom: 1vw;
 }
 
-#submitBtn {
+#contactForm #submitBtn {
     border-radius: 2vh;
     padding: 0.5vw 1vw;
     font-weight: 500;
@@ -106,7 +108,7 @@
     margin: 1vh 0;
 }
 
-#submitBtn:hover {
+#contactForm #submitBtn:hover {
     background-color: rgba(0, 0, 0, 0.356);
     border: none;
     color: white;
@@ -141,4 +143,56 @@
 #socials a:hover {
     background-color: white;
     color: black;
+}
+
+@media (max-width: 1000px){
+
+    #contactDiv .heading-1{
+        margin-top: 2vh;
+    }
+    
+    #contactDiv #separator {
+        flex-direction: column;
+    }
+
+    #contactForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contactForm #submitBtn {
+        padding: 1vh 2vh;
+    }
+
+    .line {
+        width: 100%;
+        border: solid black 0.1vw;
+        margin: 1vh 0;
+    }
+
+    #socials {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 400px){
+    #contactDiv #separator {
+       padding:0 1vh;
+    }
+
+    #socials{
+        justify-content: center;
+    }
+
+    #socials svg{
+        width: 5vh;
+    }
+
+    #socials span{
+        display: none;
+    }
 }

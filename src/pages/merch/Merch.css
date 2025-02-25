@@ -23,11 +23,11 @@
     align-items: center;
 }
 
-.heading-1{
+#contentMerch .heading-1{
     color: rgb(0, 0, 0);
     font-family: 'Montserrat', 'Arial', 'Tahoma';
     font-weight: 800;
-    font-size: clamp(1.5em, 1.75vw, 5rem);
+    font-size: clamp(1em, 5vw, 2rem);
     padding-top: 2vw;
     padding-bottom: 1vw;
     padding-left: 2vw;
@@ -105,3 +105,31 @@
     background-color: rgba(0, 0, 0, 0.726);
     color: white;
 }
+
+@media (max-width:1000px){
+
+    #contentMerch .heading-1{
+        margin-top: 2vh;
+    }
+
+    .card-temp{
+        width: 45%;
+        border-radius: 2vh;
+        padding: 2vh;
+    }
+
+    .card-temp .card-img-top{
+        height: 20vh;
+    }
+
+}
+
+@media (max-width:400px){
+    .card-temp{
+        width: 100%;
+    }
+
+    
+
+}
+

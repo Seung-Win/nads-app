@@ -69,7 +69,7 @@ function Product() {
         </h1>
         <img src={item.image} alt={item.title} id="productImg" />
         <h2> {item.price} </h2>
-        <p id="pMerch"> {item.text} </p>
+        <p> {item.text} </p>
         <ul className="list-group">
           <li className="list-group-item">
             <b>Materials:</b> {item.materials}

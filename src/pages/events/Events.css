@@ -25,18 +25,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.heading-1{
-    color: rgb(0, 0, 0);
-    font-family: 'Montserrat', 'Arial', 'Tahoma';
-    font-weight: 800;
-    font-size: clamp(1.5em, 1.75vw, 5rem);
     padding-top: 2vw;
     padding-bottom: 1vw;
     padding-left: 2vw;
+    margin-bottom: 1vw;
+}
+
+#contentEvents .heading-1{
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', 'Arial', 'Tahoma';
+    font-weight: 800;
+    font-size: clamp(1em, 5vw, 2rem);
     text-align: left;
     align-self: flex-start;
+    margin:0;
+    padding:0;
 }
 
 #partnerBtnContainer {
@@ -52,13 +55,13 @@
     border: 1px solid black;
     border-radius: 0.75vw;
     padding: 0.5vw 1.5vw;
+    font-size: clamp(1em, 2.5vw, 1rem);
     color: white;
-    margin-bottom: 1vw;
 }
 
 #pEvents{
     padding: 0 2vw;
-    font-size: clamp(0.75rem, 0.9vw, 2rem);
+    font-size: clamp(1em, 0.9vw, 2rem);
 }
 
 .gallery{
@@ -79,24 +82,24 @@
     color:rgb(0, 0, 0);
 }
 
-.card-img-top {
+.card-event .card-img-top {
     width: 100%;
     height: 12vw;
     object-fit: cover;
     display: block;
 }
 
-.card-body{
+.card-event .card-body{
     background-color: transparent;
     border-radius: 0;
 }
 
-.card-title{
+.card-event .card-title{
     margin-top:0.5vw;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
 }
 
-.card-subtitle{
+.card-event .card-subtitle{
     font-weight: 300;
     padding:0.25vw 0;
     font-size: clamp(0.75rem, 0.9vw, 2rem);
@@ -105,8 +108,8 @@
     white-space: nowrap;
 }
 
-.card-text{
-    font-size: clamp(0.5rem, 0.75vw, 2rem);
+.card-event .card-text{
+    font-size: clamp(0.75rem, 0.9vw, 2rem);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -134,5 +137,38 @@
     background-color: rgba(0, 0, 0, 0.356);
     border: none;
     color: black
+}
+
+@media (max-width:1000px){
+
+    #title{
+        padding-top: 1.5vh;
+    }
+
+    .card-event{
+        width: 45%;
+        border-radius: 2vh;
+        padding: 2vh;
+    }
+
+    .card-event .card-img-top{
+        height: 20vh;
+    }
+
+}
+
+@media (max-width:400px){
+    .card-event{
+        width: 100%;
+    }
+
+    #pEvents{
+        font-size: clamp(0.75em, 0.9vw, 2rem);
+    }
+    
+    #partnerBtn{
+        font-size: clamp(0.75em, 0.9vw, 2rem);
+    }
+
 }
 
