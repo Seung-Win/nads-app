@@ -6,7 +6,7 @@ import Heading from "./components/Heading";
 import Home from "./pages/home/Home";
 const About = React.lazy(() => import("./pages/about/about"));
 const Contact = React.lazy(() => import("./pages/contact/contact"));
-const Partner = React.lazy(() => import("./pages/partner/Partner"));
+const Partner = React.lazy(() => import("./pages/partner/partner"));
 const Events = React.lazy(() => import("./pages/events/Events"));
 const Merch = React.lazy(() => import("./pages/merch/Merch"));
 const Product = React.lazy(() => import("./pages/merch/Product"));
