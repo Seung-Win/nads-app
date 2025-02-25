@@ -1,3 +1,14 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
 #heading{
     position: fixed;
     top: 0;
@@ -12,7 +23,7 @@
 }
 
 #wordmark{
-    max-width: 7.5vw;
+    max-width: 10vw;
 }
 
 #heading .headLink{
@@ -44,7 +55,9 @@
 
 .dropdown .Link {
     display: inline-block;
+    width: 100%;
     text-decoration: none;
+    text-align: center;
     color: inherit;
     padding: .75vh 1.25vw; /* Same as other buttons */
     transition: background-color 0.5s ease-in-out;
@@ -59,7 +72,7 @@
 .dropdown-menu {
     position: absolute;
     top: 85%;
-    left: 10%;
+    left: 5%;
     background: rgba(0, 0, 0, 0.8) !important;
     list-style: none;
     padding: 0;
@@ -85,6 +98,39 @@
 
 .dropdown-menu a:hover {
     color: black;
+}
+
+@media (max-width: 850px) {
+    #heading{
+        width:40vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #wordmark{
+        max-width: 20vw;
+        padding-bottom: 1vh;
+        border-bottom: 1vw solid rgba(255, 255, 255, 0.548) ;
+    }
+
+    #heading ul{
+        padding-left: 0;
+        width: 100%;
+        align-items: center;
+        
+    }
+
+    #heading .headLink{
+        display: flex;
+        font-size: clamp(0.5em, 1.5vh, 1.25em);
+        padding: 0;
+        margin: 0;
+    }
+
+    #heading a, #heading .Link{
+        padding: 2vh 10vw;
+    }
 }
 
   

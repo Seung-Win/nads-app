@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function Heading() {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
 
   let timeoutId: NodeJS.Timeout | null = null;
 
@@ -18,6 +19,10 @@ function Heading() {
   const handleMouseLeave = () => {
     timeoutId = setTimeout(() => setDropdownOpen(false), 200); // Small delay to prevent flickering
   };
+
+  const handleNavbar = () => {
+    setNavbarOpen(true);
+  }
 
   return (
     <>
@@ -53,6 +58,7 @@ function Heading() {
           </li>
         </ul>
       </nav>
+      <div className="overlay"></div>
     </>
   );
 }
