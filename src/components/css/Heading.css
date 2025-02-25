@@ -1,14 +1,3 @@
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-}
-
 #heading{
     position: fixed;
     top: 0;
@@ -59,7 +48,7 @@
     text-decoration: none;
     text-align: center;
     color: inherit;
-    padding: .75vh 1.25vw; /* Same as other buttons */
+    padding: .75vh 1.25vw;
     transition: background-color 0.5s ease-in-out;
     border-radius: 3vh;
     font-family: 'Montserrat', 'Arial', 'Tahoma';
@@ -99,38 +88,3 @@
 .dropdown-menu a:hover {
     color: black;
 }
-
-@media (max-width: 850px) {
-    #heading{
-        width:40vw;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    #wordmark{
-        max-width: 20vw;
-        padding-bottom: 1vh;
-        border-bottom: 1vw solid rgba(255, 255, 255, 0.548) ;
-    }
-
-    #heading ul{
-        padding-left: 0;
-        width: 100%;
-        align-items: center;
-        
-    }
-
-    #heading .headLink{
-        display: flex;
-        font-size: clamp(0.5em, 1.5vh, 1.25em);
-        padding: 0;
-        margin: 0;
-    }
-
-    #heading a, #heading .Link{
-        padding: 2vh 10vw;
-    }
-}
-
-  

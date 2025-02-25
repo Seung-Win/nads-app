@@ -1,32 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./css/Heading.css";
 import wordmark from "../assets/wordmark.png";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Heading() {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
-
-  let timeoutId: NodeJS.Timeout | null = null;
 
   const handleMouseEnter = () => {
-    if (timeoutId !== null) {
-      clearTimeout(timeoutId);
-    }
-    setDropdownOpen(true);
+    setDropdownOpen((prev) => !prev);
   };
-
-  const handleMouseLeave = () => {
-    timeoutId = setTimeout(() => setDropdownOpen(false), 200); // Small delay to prevent flickering
-  };
-
-  const handleNavbar = () => {
-    setNavbarOpen(true);
-  }
 
   return (
     <>
-      <nav className="" id="heading">
+      <nav id="heading">
         <Link to="/">
           <img
             src={wordmark}
@@ -37,28 +24,61 @@ function Heading() {
         </Link>
         <ul className="">
           <li className="headLink">
-            <Link className="Link" to="/events">Events</Link>
+            <Link className="Link" to="/events">
+              Events
+            </Link>
           </li>
           <li className="headLink">
-            <Link className="Link" to="/merch">Merch</Link>
+            <Link className="Link" to="/merch">
+              Merch
+            </Link>
           </li>
           <li className="headLink">
-            <Link className="Link" to="/about">About</Link>
+            <Link className="Link" to="/about">
+              About
+            </Link>
           </li>
-          <li 
-            className="dropdown headLink" 
-            onMouseEnter = {handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+          <li
+            className="dropdown headLink"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseEnter}
           >
             <span className="Link">Contact Us ▼</span>
-              <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-                <li><Link className="Link" to="/contact">Contact Us</Link></li>
-                <li><Link className="Link" to="/partner">Partner With Us</Link></li>
-              </ul>
+            <AnimatePresence>
+              {dropdownOpen && (
+                <motion.ul
+                  className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.li
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Link className="Link" to="/contact">
+                      Contact Us
+                    </Link>
+                  </motion.li>
+                  <motion.li
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Link className="Link" to="/partner">
+                      Partner With Us
+                    </Link>
+                  </motion.li>
+                </motion.ul>
+              )}
+            </AnimatePresence>
           </li>
         </ul>
       </nav>
-      <div className="overlay"></div>
     </>
   );
 }
