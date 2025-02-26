@@ -1,14 +1,40 @@
 import "./SingleEvent.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Papa from "papaparse";
 import { Button } from "react-bootstrap";
 import DataPrivacy from "../modal/DataPrivacy";
 
 function EventForm() {
   const [showModal, setShowModal] = useState(false);
   const [enableButton, setEnableButton] = useState(false);
+  const [universities, setUniversities] = useState<string[]>([]);
+  const [programs, setPrograms] = useState<string[]>([]);
+
+  useEffect(() => {
+    fetch("/universities.csv")
+      .then((response) => response.text())
+      .then((text) => {
+        const parsedData = Papa.parse(text, { header: true });
+        if (parsedData.data) {
+          setUniversities(parsedData.data.map((row) => row.university));
+        }
+      })
+      .catch((error) => console.error("Error loading universities:", error));
+  }, []);
+
+  useEffect(() => {
+    fetch("/programs.csv")
+      .then((response) => response.text())
+      .then((text) => {
+        const parsedData = Papa.parse(text, { header: true });
+        if (parsedData.data) {
+          setPrograms(parsedData.data.map((row) => row.program));
+        }
+      })
+      .catch((error) => console.error("Error loading programs:", error));
+  }, []);
 
   const handleShowModal = () => setShowModal(true);
-
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => setEnableButton(event.target.checked)
 
   return (
@@ -82,65 +108,33 @@ function EventForm() {
             required
           />  
         <label>University (do not abbreviate)</label>
-          <input 
-            className="form-control"
-            id="universityInput" 
-            list="universities"
-            placeholder="e.g. Polytechnic University of the Philippines - Manila" 
-            required 
-          />
-          <datalist id="universities">
-            <option value="Adamson University" />
-            <option value="Ateneo de Manila University" />
-            <option value="Centro Escolar University - Manila" />
-            <option value="Colegio de San Juan de Letran - Manila" />
-            <option value="De La Salle University" />
-            <option value="Eulogio 'Amang' Rodriguez Institute of Science and Technology - Manila" />
-            <option value="Far Eastern University - Dr. Nicanor Reyes Medical Foundation" />
-            <option value="Far Eastern University - Institute of Technology" />
-            <option value="Far Eastern University - Manila" />
-            <option value="Lyceum of the Philippines University - Manila" />
-            <option value="Manila Central University" />
-            <option value="Mapúa University - Intramuros" />
-            <option value="Mapúa University - Makati" />
-            <option value="Marikina Polytechnic College" />
-            <option value="National University - Manila" />
-            <option value="New Era University - Main" />
-            <option value="Our Lady of Fatima University - QC" />
-            <option value="Our Lady of Fatima University - Valenzuela" />
-            <option value="Pamansatan ng Lungsod ng Maynila" />
-            <option value="PATTS College of Aeronautics" />
-            <option value="Philippine Normal University" />
-            <option value="Philippine State College of Aeronautics - Villamor" />
-            <option value="Polytechnic University of the Philippines - Manila" />
-            <option value="Polytechnic University of the Philippines - San Juan" />
-            <option value="Polytechnic University of the Philippines - Taguig" />
-            <option value="Rizal Technological University - Boni" />
-            <option value="Rizal Technological University - Pasig" />
-            <option value="Southville International School and Colleges" />
-            <option value="Technological Institute of the Philippines - Manila" />
-            <option value="Technological Institute of the Philippines - QC" />
-            <option value="Technological University of the Philippines - Manila" />
-            <option value="Technological University of the Philippines - Taguig" />
-            <option value="Trinity University of Asia" />
-            <option value="University of Santo Tomas" />
-            <option value="University of the East - Caloocan" />
-            <option value="University of the East - Manila" />
-            <option value="University of the Philippines - Diliman" />
-            <option value="University of the Philippines - Manila" />
-            <option value="World Citi Colleges Aeronautical & Technological College - North Manila" />
-          </datalist>
+          <input
+                className="form-control"
+                id="univeristyInput"
+                list="universities"
+                placeholder="e.g. Ateneo de Manila University"
+                required
+              />
+              <datalist id="universities">
+                {universities.map((universities, index) => (
+                  <option key={index} value={universities} />
+                ))}
+              </datalist>
         <div className="row">
           <div className="col">
-            <label>Program (do not abbreviate)</label>
+          <label>Program (do not abbreviate)</label>
             <input
-              type="text"
               className="form-control"
-              id="emailInput"
-              aria-describedby="emailHelp"
-              placeholder="e.g. Bachelor of Science in Information Technology"
+              id="programInput"
+              list="programs"
+              placeholder="e.g. BS Management Information Systems"
               required
             />
+            <datalist id="programs">
+              {programs.map((program, index) => (
+                <option key={index} value={program} />
+              ))}
+            </datalist>
           </div>
           <div className="col">
             <label>Year level</label>
