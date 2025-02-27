@@ -1,9 +1,29 @@
 import "./Merch.css";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { MerchData } from "../../data/MerchData";
 import { motion } from "framer-motion";
 
 function Merch() {
+
+  interface MerchItem {
+    image: string;
+    title: string;
+    price: string;
+    text: string;
+  }
+
+  const [merchData, setMerchData] = useState<MerchItem[]>([]);
+
+  useEffect(() =>{
+    fetch("http://localhost:4040/getMerch").then(
+      response => response.json()
+    ).then(
+      data => {
+        setMerchData(data)
+      }
+    )
+  }, []);
+
   const pageVariants = {
     hidden: { x: "100vw", opacity: 0 },
     visible: {
@@ -35,7 +55,7 @@ function Merch() {
           stylish items designed for scholars like you.
         </p>
         <div className="gallery">
-          {MerchData.map((item, index) => (
+          {merchData.map((item, index) => (
             <div className="card-temp" key={index}>
               <img
                 className="card-img-top"

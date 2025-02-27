@@ -1,6 +1,6 @@
 const { initializeApp } = require("firebase/app");
 const { errorHandler } = require("./helpers");
-const { getFirestore, doc, setDoc } = require("firebase/firestore")
+const { getFirestore, addDoc, collection, getDocs, query } = require("firebase/firestore")
 
 const{
     FIREBASE_API_KEY,
@@ -37,18 +37,57 @@ const initializeFirebaseApp = () => {
 
 const uploadProcessedData = async () => {
     const dataToUpload = {
-        key1: "test",
-        key2: 123,
-        key3: new Date(),
+        image: "test",
+        title: "Hoodie",
+        price: "PHP 850",
+        text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        materials: "Synthetic Fiber, 100% vegan",
+        release: "22/02/25",
+        code: "nucksHoodie0225",
     };
     try{
-        const document = doc(firestoreDb, "testing", "some-unique-ids");
-        let dataUpdated = await setDoc(document, dataToUpload);
+        const dataUpdated = await addDoc(collection(firestoreDb,"merch"), dataToUpload);
         return dataUpdated;
     }catch(error){
         errorHandler(error, "firebase-uploadProcessedData");
     }
 };
+
+const getMerchData = async (from, to) =>{
+    try {
+        const collectionRef = collection(firestoreDb, "merch");
+        const finalData = [];
+        const q = query(collectionRef);
+
+        const docSnap = await getDocs(q);
+
+        docSnap.forEach((doc)=>{
+            finalData.push(doc.data());
+        });
+
+        return finalData;
+    } catch (error) {
+        errorHandler(error, "firebase-getData");
+    }
+}
+
+const getEventData = async (from, to) =>{
+    try {
+        const collectionRef = collection(firestoreDb, "events");
+        const finalData = [];
+        const q = query(collectionRef);
+
+        const docSnap = await getDocs(q);
+
+        docSnap.forEach((doc)=>{
+            finalData.push(doc.data());
+        });
+
+        return finalData;
+    } catch (error) {
+        errorHandler(error, "firebase-getData");
+    }
+}
 
 const getFirebaseApp = () => app;
 
@@ -56,4 +95,6 @@ module.exports = {
     initializeFirebaseApp,
     getFirebaseApp,
     uploadProcessedData,
+    getMerchData,
+    getEventData,
 };

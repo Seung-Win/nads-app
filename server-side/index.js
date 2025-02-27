@@ -6,6 +6,8 @@ const { handler } = require("./controller")
 const { initializeFirebaseApp } = require("./controller/lib/firebase")
 
 const app = express();
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 initializeFirebaseApp();
 

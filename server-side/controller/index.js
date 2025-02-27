@@ -1,5 +1,5 @@
 const { errorHandler } = require("./lib/helpers.js")
-const { uploadProcessedData } = require("./lib/firebase.js")
+const { uploadProcessedData, getMerchData, getEventData } = require("./lib/firebase.js")
 
 async function handler(req, method) {
     try{
@@ -9,6 +9,16 @@ async function handler(req, method) {
             if (path === "/test-upload"){
                 await uploadProcessedData();
                 return "Success";
+            }
+
+            if (path === "/getMerch"){
+                const data = await getMerchData();
+                return JSON.stringify(data);
+            }
+
+            if (path === "/getEvents"){
+                const data = await getEventData();
+                return JSON.stringify(data);
             }
         }
 

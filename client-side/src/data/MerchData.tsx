@@ -47,6 +47,6 @@ export const MerchData = [
     text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
     materials: "Synthetic Fiber, 100% vegan",
     release: "22/02/25",
-    code: "hdnucks0225",
+    code: "pins0225",
   },
 ];

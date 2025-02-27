@@ -1,9 +1,30 @@
 import "./Events.css";
-import { events } from "../../data/EventData";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Events() {
+
+  interface EventItem {
+      image: string;
+      title: string;
+      subtitle: string;
+      price: string;
+      text: string;
+    }
+  
+    const [eventData, setEventData] = useState<EventItem[]>([]);
+  
+    useEffect(() =>{
+      fetch("http://localhost:4040/getEvents").then(
+        response => response.json()
+      ).then(
+        data => {
+          setEventData(data)
+        }
+      )
+    }, []);
+
   const pageVariants = {
     hidden: { x: "100vw", opacity: 0 },
     visible: {
@@ -42,7 +63,7 @@ function Events() {
           educate, and connect scholars within NCR.
         </p>
         <div className="gallery">
-          {events.map((item, index) => (
+          {eventData.map((item, index) => (
             <div className="card-event" key={index}>
               <img className="card-img-top" src={item.image} alt={item.title} />
               <div className="card-body">
