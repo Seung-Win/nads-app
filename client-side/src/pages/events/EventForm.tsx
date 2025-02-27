@@ -14,7 +14,7 @@ function EventForm() {
     fetch("/universities.csv")
       .then((response) => response.text())
       .then((text) => {
-        const parsedData = Papa.parse(text, { header: true });
+        const parsedData = Papa.parse<{ university: string }>(text, { header: true });
         if (parsedData.data) {
           setUniversities(parsedData.data.map((row) => row.university));
         }
@@ -26,7 +26,7 @@ function EventForm() {
     fetch("/programs.csv")
       .then((response) => response.text())
       .then((text) => {
-        const parsedData = Papa.parse(text, { header: true });
+        const parsedData = Papa.parse<{ program: string }>(text, { header: true });
         if (parsedData.data) {
           setPrograms(parsedData.data.map((row) => row.program));
         }
